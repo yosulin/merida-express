@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mérida Exprés · Plan del viaje</title>
+<meta name="theme-color" content="#7A2E2E">
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icon-192.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Emerita Augusta · 31 julio 2026</div>
+  <h1>Mérida Exprés</h1>
+  <p class="sub">Tarde-noche en Mérida · camino a Descargamaría vía Cáceres</p>
+  <button id="install-btn">⤓ Añadir a pantalla de inicio</button>
+</header>
+
+<div class="container">
+
+  <div class="section-title"><span class="roman">I</span><h2>El paseo de esta tarde</h2></div>
+
+  <div id="map" role="img" aria-label="Mapa con la ruta a pie de esta tarde por Mérida"></div>
+  <p class="map-caption">Templo de Diana → Acueducto de los Milagros → Puente Romano → Arco de Trajano → Plaza de España</p>
+
+  <div class="via" style="margin-top:28px;">
+    <div class="milestone">
+      <div class="num">I</div>
+      <div class="card">
+        <h3>Templo de Diana</h3>
+        <span class="time">≈ 18:00h · gratis, acceso libre</span>
+        <p>Columnas romanas en pleno centro. Parada rápida y agradecida, 15-20 min.</p>
+        <span class="tag">gratis</span><span class="tag">15-20 min</span>
+      </div>
+    </div>
+    <div class="milestone">
+      <div class="num">II</div>
+      <div class="card">
+        <h3>Acueducto de los Milagros</h3>
+        <span class="time">≈ 18:30h · gratis, Parque de los Milagros</span>
+        <p>Arcos de hasta 25 m junto al río Albarregas, en un parque amplio para que la niña corretee.</p>
+        <span class="tag">gratis</span><span class="tag">parque</span>
+      </div>
+    </div>
+    <div class="milestone">
+      <div class="num">III</div>
+      <div class="card">
+        <h3>Puente Romano + orillas del Guadiana</h3>
+        <span class="time">≈ 19:30h · gratis</span>
+        <p>El puente romano más largo conservado, con la Alcazaba de fondo (se disfruta perfectamente por fuera).</p>
+        <span class="tag">gratis</span><span class="tag">río</span>
+      </div>
+    </div>
+    <div class="milestone">
+      <div class="num">IV</div>
+      <div class="card">
+        <h3>Arco de Trajano</h3>
+        <span class="time">≈ 20:15h · gratis</span>
+        <p>Antigua puerta monumental romana, parada corta camino de la plaza.</p>
+        <span class="tag">gratis</span>
+      </div>
+    </div>
+    <div class="milestone">
+      <div class="num">V</div>
+      <div class="card">
+        <h3>Plaza de España</h3>
+        <span class="time">≈ 20:30h · gratis</span>
+        <p>Soportales y terrazas — buen sitio para un helado antes de cenar.</p>
+        <span class="tag">gratis</span><span class="tag">relax</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="roman">II</span><h2>Cena reservada</h2></div>
+  <div class="card-plain">
+    <h3>Vuestra reserva</h3>
+    <p>Tenéis mesa aquí: <a href="https://maps.app.goo.gl/Y1JqWddzqYJ3EmQv7?g_st=iw" target="_blank" rel="noopener">ver ubicación en Google Maps</a>. Mejor cenar sobre las 21:00-21:30h para llegar con margen al Teatro Romano.</p>
+  </div>
+
+  <div class="section-title"><span class="roman">III</span><h2>Esta noche: La Comedia de la Olla</h2></div>
+  <div class="card-plain highlight">
+    <h3>Teatro Romano de Mérida</h3>
+    <p class="time">22:45h — el inicio real es a las 22:45h, no a las 23h</p>
+    <p>Versión cómica de la <em>Aulularia</em> de Plauto, con Carlos Sobera y Ángel Pardo, dirigida por Juan Luis Iborra. Ritmo de vodevil y humor visual: buen formato para una niña de 9 años.</p>
+  </div>
+
+  <div class="section-title"><span class="roman">IV</span><h2>Mañana, camino a Descargamaría</h2></div>
+  <div class="card-plain">
+    <h3>Cáceres: casco histórico</h3>
+    <p class="time">1-1.5h · gratis, al aire libre</p>
+    <p>Plaza Mayor → Plaza de Santa María → callejeo por el recinto amurallado. Casas-palacio, torres y muchas cigüeñas en los tejados. Mejor a primera hora por el calor.</p>
+  </div>
+  <div class="card-plain">
+    <h3>Opcional de pago: Torre de Bujaco</h3>
+    <p>Entrada económica, 5-10 min de subida, las mejores vistas de la Plaza Mayor. Única excepción de pago, si os apetece.</p>
+  </div>
+
+  <p class="note">Instalada como app, esta página funciona sin conexión (salvo el mapa, que necesita datos).</p>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
