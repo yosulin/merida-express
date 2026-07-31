@@ -1,0 +1,15 @@
+{
+  "name": "Mérida Exprés · Plan del viaje",
+  "short_name": "Mérida Exprés",
+  "description": "Ruta a pie por Mérida, cena, teatro romano y parada en Cáceres camino a Descargamaría.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ECE3D3",
+  "theme_color": "#7A2E2E",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
