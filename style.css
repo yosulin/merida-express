@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --stone: #ECE3D3;
+  --stone-dark: #DCCFB4;
+  --ink: #2B2118;
+  --brick: #7A2E2E;
+  --brick-dark: #5E2222;
+  --patina: #5C6B4F;
+  --gold: #C9A227;
+  --card: #FBF7EE;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--stone);
+  color: var(--ink);
+  font-family: 'Source Serif 4', serif;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ---------- Header ---------- */
+header {
+  position: relative;
+  padding: 44px 20px 34px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201,162,39,0.15), transparent 55%),
+    linear-gradient(160deg, var(--brick) 0%, var(--brick-dark) 100%);
+  color: var(--stone);
+  overflow: hidden;
+}
+header::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 10px;
+  background: repeating-linear-gradient(90deg, var(--gold) 0 14px, transparent 14px 28px);
+  opacity: 0.8;
+}
+.eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+header h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin: 0 0 8px;
+  letter-spacing: 1px;
+}
+header p.sub {
+  margin: 0;
+  font-size: 0.95em;
+  opacity: 0.92;
+}
+
+#install-btn {
+  display: none;
+  margin: 18px auto 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  background: var(--gold);
+  color: var(--brick-dark);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 700;
+}
+#install-btn.show { display: inline-block; }
+#install-btn:focus-visible, a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ---------- Layout ---------- */
+.container { max-width: 640px; margin: 0 auto; padding: 0 18px 60px; }
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 42px 0 18px;
+}
+.section-title .roman {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 1em;
+  border: 1px solid var(--gold);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.section-title h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.15em;
+  letter-spacing: 0.5px;
+  color: var(--brick-dark);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* ---------- Map ---------- */
+#map {
+  height: 340px;
+  border-radius: 6px;
+  border: 3px solid var(--card);
+  outline: 1px solid var(--stone-dark);
+  margin-bottom: 8px;
+}
+.map-caption {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75em;
+  color: var(--patina);
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+/* ---------- Via / itinerary timeline ---------- */
+.via {
+  position: relative;
+  padding-left: 46px;
+}
+.via::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  background: repeating-linear-gradient(180deg, var(--brick) 0 10px, var(--gold) 10px 12px);
+  border-radius: 2px;
+}
+.milestone {
+  position: relative;
+  margin-bottom: 22px;
+}
+.milestone .num {
+  position: absolute;
+  left: -46px;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--brick);
+  color: var(--stone);
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.95em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--gold);
+}
+.milestone .card {
+  background: var(--card);
+  border: 1px solid var(--stone-dark);
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+.milestone h3 {
+  margin: 0 0 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.02em;
+  color: var(--brick-dark);
+}
+.milestone .time {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78em;
+  color: var(--patina);
+  display: block;
+  margin-bottom: 6px;
+}
+.milestone p { margin: 4px 0; font-size: 0.94em; }
+.tag {
+  display: inline-block;
+  background: var(--stone-dark);
+  color: var(--brick-dark);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68em;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin: 6px 6px 0 0;
+}
+
+/* ---------- Generic cards ---------- */
+.card-plain {
+  background: var(--card);
+  border: 1px solid var(--stone-dark);
+  border-left: 5px solid var(--patina);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.card-plain.highlight { border-left-color: var(--brick); background: #F3E8D3; }
+.card-plain h3 {
+  margin: 0 0 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.02em;
+  color: var(--brick-dark);
+}
+.card-plain p { margin: 4px 0; font-size: 0.94em; }
+.card-plain .time { font-family: 'Space Mono', monospace; color: var(--patina); font-size: 0.8em; }
+a { color: var(--brick); font-weight: 600; }
+
+.note {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75em;
+  color: var(--patina);
+  border-top: 1px dashed var(--stone-dark);
+  padding-top: 16px;
+  margin-top: 30px;
+  text-align: center;
+}
